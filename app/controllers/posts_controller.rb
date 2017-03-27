@@ -10,6 +10,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @comment = Comment.new
+    # Returns an array with all comments that relate to the post
+    @comments = @post.comments
   end
 
   # GET /posts/new
